@@ -1,0 +1,40 @@
+tokenpayd createrawtransaction '[{"txid":"de53ca36d1dd36e828121bae1286cee4cb0e14b25c914b1dc510d95270ac2dfc","vout":0,"address":"TNLjFxZae7E2TFCnRYfd7D61BSzbb2kNx3","account":"","scriptPubKey":"76a91487b38074fb7e6ecdaf930267edc8fce077f2e09588ac","amount":0.50000000,"confirmations":21}]' '{"TMUKGYVZe2pY5jxVqnRYkNSa6yE79cB18s":0.4}'
+
+raw from tokenpayd
+010000007af12b5b01fc2dac7052d910c51d4b915cb2140ecbe4ce8612ae1b1228e836ddd136ca53de0000000000ffffffff01005a6202000000001976a9147e2aad8c707d7d9778e3e833180cb97ac52d932988ac00000000
+
+signed 
+010000007af12b5b01fc2dac7052d910c51d4b915cb2140ecbe4ce8612ae1b1228e836ddd136ca53de000000006a473044022061d6ff370e779d181a91037a4fdd49b506f8f47d37604b065434fd6da491737c022037510ae8351ec83407ba2c9d2e78d01521311660a86644e6ad2a410705052cd001210261d7c2b75e8bc505fda612f6df751a6ec78456c317d4e76aeb6d31df558f5268ffffffff01005a6202000000001976a9147e2aad8c707d7d9778e3e833180cb97ac52d932988ac00000000
+
+{
+    "txid" : "83cf5c1fe2007e43fa20cf57aca8395fa9eb08b4b9f69e1d841d7ceda5255d02",
+    "version" : 1,
+    "time" : 1529606522,
+    "locktime" : 0,
+    "vin" : [
+        {
+            "txid" : "de53ca36d1dd36e828121bae1286cee4cb0e14b25c914b1dc510d95270ac2dfc",
+            "vout" : 0,
+            "scriptSig" : {
+                "asm" : "3044022061d6ff370e779d181a91037a4fdd49b506f8f47d37604b065434fd6da491737c022037510ae8351ec83407ba2c9d2e78d01521311660a86644e6ad2a410705052cd001 0261d7c2b75e8bc505fda612f6df751a6ec78456c317d4e76aeb6d31df558f5268",
+                "hex" : "473044022061d6ff370e779d181a91037a4fdd49b506f8f47d37604b065434fd6da491737c022037510ae8351ec83407ba2c9d2e78d01521311660a86644e6ad2a410705052cd001210261d7c2b75e8bc505fda612f6df751a6ec78456c317d4e76aeb6d31df558f5268"
+            },
+            "sequence" : 4294967295
+        }
+    ],
+    "vout" : [
+        {
+            "value" : 0.40000000,
+            "n" : 0,
+            "scriptPubKey" : {
+                "asm" : "OP_DUP OP_HASH160 7e2aad8c707d7d9778e3e833180cb97ac52d9329 OP_EQUALVERIFY OP_CHECKSIG",
+                "hex" : "76a9147e2aad8c707d7d9778e3e833180cb97ac52d932988ac",
+                "reqSigs" : 1,
+                "type" : "pubkeyhash",
+                "addresses" : [
+                    "TMUKGYVZe2pY5jxVqnRYkNSa6yE79cB18s"
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,65 @@
+import bitcore from 'bitcore-lib';
+var Mnemonic = require("bitcore-mnemonic");
+
+// let mappedutxos = [];
+// let mymappedutxos = [
+//   { address: 'TMUKGYVZe2pY5jxVqnRYkNSa6yE79cB18s',
+//   txId: '50fd309139e249d34a5b2cc9888322b7f53c75466d9920b59da0400026f89b95',
+//   satoshis: 100000,
+//   outputIndex: 0,
+//   script: '76a9147e2aad8c707d7d9778e3e833180cb97ac52d932988ac' }
+// ]
+
+var   coin_data = {
+    verge: {
+      mainnet: {
+        network_data: {
+          name: 'verge/mainnet',
+          alias: 'verge livenet',
+          pubkeyhash: 0x1e,
+          privatekey: 0xb3,
+          scripthash: 0x21,
+          xpubkey: 0x0488B21e,
+          xprivkey: 0x0488ade4,
+          wif: 0x9e,
+        },
+        bip44_id: 265
+      }
+    }
+  }
+
+var desired_coin_data = coin_data["verge"];
+
+bitcore.Networks.add(desired_coin_data["mainnet"].network_data);
+
+// const keywords = 'orbit hurt mountain stick memory wasp toast morning sauce indicate either emerge media flame crash major insane cheap indoor verb bundle keep steel insane';
+const keywords = 'egg anxiety inform pony grant sunny mistake order strike dolphin day monitor logic february daring token payment tunnel connect explain library kind metal enforce';
+const code = new Mnemonic(keywords);
+const hdPrivateKey = code.toHDPrivateKey("", "verge/mainnet"); // no passphrase
+const derivationPath = hdPrivateKey
+.derive(44, true)
+.derive(coin_data["verge"]["mainnet"].bip44_id, true)
+.derive(0, true)
+.derive(0);
+
+const privateKey = derivationPath.derive(0).privateKey;
+// const privateKey = bitcore.PrivateKey("5f3da7ee0ceed5d51258b3f8661ebff58ddabc7f69c50c482875cc641f3978e8", 'verge/mainnet');
+const privateKeyWif = privateKey.toWIF();
+const publicKey = new bitcore.PublicKey(privateKey);
+const address = privateKey.toAddress();
+
+console.log('address', address);
+console.log('privateKey', privateKey);
+console.log('publicKey', publicKey);
+console.log('privateKeyWif', privateKeyWif);
+//TVbJSt8PPvWAD4qMo8tcumz52yD4niYQQi6qCE7Kk16isanRpiNe
+
+// address <Address: D8CxB96MkFz25jSrvhaf8M4MCx9XovpMr5, type: pubkeyhash, network: verge/mainnet>
+// privateKey <PrivateKey: 5f3da7ee0ceed5d51258b3f8661ebff58ddabc7f69c50c482875cc641f3978e8, network: verge/mainnet>
+// publicKey <PublicKey: 02e0db240fc3adf10bcd8d985b9b6a7d780cb9a4734db1f961453b4e3bb2b79d74>
+// privateKeyWif TXz1DZqiGX1NNsgzF4vpNdsZa34D8bJxwmeQNYLqe2mbv8oTjytX
+
+// address <Address: DQYQLYum6wstk4Lq1uTvFxSTosa6fcHLrL, type: pubkeyhash, network: verge/mainnet>
+// privateKey <PrivateKey: 1a326896e5db6aa3459d9a4eb4219205677ef81f12645a111d6c243f18855aed, network: verge/mainnet>
+// publicKey <PublicKey: 031eccd19127b02c7fc92677d41a45e2b5b8a74d27f14a97db273f8e6006a51fac>
+// privateKeyWif TVfnu6RQ7bPM8XQziNco1y6eQv5N3kqKc6rhChaHLcf6hnNqfyrX

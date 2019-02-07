@@ -1,0 +1,25 @@
+paperspace@HOSTNAME:~/testtpay$ sudo journalctl -u electrum-server.service -f
+-- Logs begin at Fri 2018-06-15 16:26:35 EDT. --
+Jun 20 01:33:24 HOSTNAME electrumx_server.py[18794]: INFO:Controller:session bandwidth limit 2,000,000 bytes
+Jun 20 01:33:24 HOSTNAME electrumx_server.py[18794]: INFO:Controller:max response size 1,000,000 bytes
+Jun 20 01:33:24 HOSTNAME electrumx_server.py[18794]: INFO:Controller:max subscriptions across all sessions: 250,000
+Jun 20 01:33:24 HOSTNAME electrumx_server.py[18794]: INFO:Controller:max subscriptions per session: 50,000
+Jun 20 01:33:24 HOSTNAME electrumx_server.py[18794]: INFO:Controller:TCP server listening on 127.0.0.1:50001
+Jun 20 01:33:24 HOSTNAME electrumx_server.py[18794]: INFO:Controller:SSL server listening on 127.0.0.1:50002
+Jun 20 01:33:24 HOSTNAME electrumx_server.py[18794]: INFO:Prefetcher:catching up to daemon height 210,745 (2,683 blocks behind)
+Jun 20 01:33:24 HOSTNAME electrumx_server.py[18794]: INFO:BlockProcessor:chain reorg detected
+Jun 20 01:33:24 HOSTNAME electrumx_server.py[18794]: INFO:BlockProcessor:chain was reorganised replacing 1 block at heights 208,062-208,062
+Jun 20 01:33:24 HOSTNAME electrumx_server.py[18794]: INFO:Controller:ERROR: uncaught task exception: [{'code': -5, 'message': 'No information available about transaction'}]
+
+
+name: 'livenet',
+alias: 'mainnet',
+pubkeyhash: 0x41, // P2PKH
+privatekey: 0xb3, // WIF
+scripthash: 0x7e, // P2SH
+xpubkey:  0x0488B21E, // XPUB
+xprivkey: 0x0488ADE4, // XPRV
+port: 8800
+
+
+scp test.js paperspace@184.105.216.34:/home/paperspace/testtpay/test.js

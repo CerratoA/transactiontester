@@ -1,0 +1,55 @@
+
+raw
+01000000d9d2295b01b1c8e70f7361b063e5492625c4f71a7e73487566bad8480c609be4385b87b973010000006a4730440220650518df4d12009bba3303380359201e548a47bfb376bf967c2a075ffab8de9a022042a9a059e79171d52d6ced64e5b83f9a203042a2f0ddfea429b72f98d38ce93b012103d309ef7b2691b82caa3a6b0c604bfc017fa6e962a933af3c162230e37b964f70ffffffff02f0c1a435000000001976a914d59b58d393ef20cb5dff86727945cae7d49854d088ac00e1f505000000001976a914a824779bcb98d9c0ebf5b51c7cd878707925c93788ac00000000
+
+myraw bitcore
+0100000001959bf8260040a09db520996d46753cf5b7228388c92c5b4ad349e2399130fd50000000006a47304402207f6ed14b2a11a192e990e71dd481c79f8a5e67b573c429fb7a90f0bf6fdd909102205d7fe8b0d8e3835b815d43d186c6b402cc0018695e9156e814f2cd4f289264da012102be14282fe266c5740b09abf6b5c5c8873c101afcf6dd7917961f3ff2de4104f9ffffffff01905f0100000000001976a9144caa69c3770e1faa1d451595497fe0c2986f067488ac00000000
+
+myraw bitcoinjs
+0100000001959bf8260040a09db520996d46753cf5b7228388c92c5b4ad349e2399130fd50000000006b483045022100c7e5f1168a214a1c7fba4bd0439578a0718ca17f211330cb02b95db74f6aa56402200ea1a58286d7253ab49a992bbf0ca69f98cec7f44dd27f4889716d23b374d044012102be14282fe266c5740b09abf6b5c5c8873c101afcf6dd7917961f3ff2de4104f9ffffffff0184030000000000001976a9144caa69c3770e1faa1d451595497fe0c2986f067488ac00000000
+
+{
+    "txid" : "e3bc0ba798e7407e5bf6d438d66229351f94ae50f92a277db886f024c6bc043c",
+    "version" : 1,
+    "time" : 1529467609,
+    "locktime" : 0,
+    "vin" : [
+        {
+            "txid" : "73b9875b38e49b600c48d8ba667548737e1af7c4252649e563b061730fe7c8b1",
+            "vout" : 1,
+            "scriptSig" : {
+                "asm" : "30440220650518df4d12009bba3303380359201e548a47bfb376bf967c2a075ffab8de9a022042a9a059e79171d52d6ced64e5b83f9a203042a2f0ddfea429b72f98d38ce93b01 03d309ef7b2691b82caa3a6b0c604bfc017fa6e962a933af3c162230e37b964f70",
+                "hex" : "4730440220650518df4d12009bba3303380359201e548a47bfb376bf967c2a075ffab8de9a022042a9a059e79171d52d6ced64e5b83f9a203042a2f0ddfea429b72f98d38ce93b012103d309ef7b2691b82caa3a6b0c604bfc017fa6e962a933af3c162230e37b964f70"
+            },
+            "sequence" : 4294967295
+        }
+    ],
+    "vout" : [
+        {
+            "value" : 8.99990000,
+            "n" : 0,
+            "scriptPubKey" : {
+                "asm" : "OP_DUP OP_HASH160 d59b58d393ef20cb5dff86727945cae7d49854d0 OP_EQUALVERIFY OP_CHECKSIG",
+                "hex" : "76a914d59b58d393ef20cb5dff86727945cae7d49854d088ac",
+                "reqSigs" : 1,
+                "type" : "pubkeyhash",
+                "addresses" : [
+                    "TVSf2ch2zjeUqVN21xXLkhBYxLMRtBacsj"
+                ]
+            }
+        },
+        {
+            "value" : 1.00000000,
+            "n" : 1,
+            "scriptPubKey" : {
+                "asm" : "OP_DUP OP_HASH160 a824779bcb98d9c0ebf5b51c7cd878707925c937 OP_EQUALVERIFY OP_CHECKSIG",
+                "hex" : "76a914a824779bcb98d9c0ebf5b51c7cd878707925c93788ac",
+                "reqSigs" : 1,
+                "type" : "pubkeyhash",
+                "addresses" : [
+                    "TRJGD5DKgFBk6nknyixdgta1x28sgjunyp"
+                ]
+            }
+        }
+    ]
+}
